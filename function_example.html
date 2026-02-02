@@ -13,6 +13,7 @@
 
     <div class="card shadow-lg p-4" style="width: 430px;">
         <h3 class="text-center mb-4">Arithmetic Calculator</h3>
+        <!-- <form name="myform"> -->
 
         <!-- Number A -->
         <div class="mb-3">
@@ -26,23 +27,25 @@
             <input type="number" id="num2" class="form-control" placeholder="Enter number B">
         </div>
 
-        <!-- Operations -->
+        
         <div class="row g-2 mb-3">
             <div class="col-4">
-                <button class="btn btn-outline-primary w-100" onclick="calculate('+')">+</button>
+                <button class="btn btn-outline-primary w-100" type="button" onclick="calculate('+')">+</button>
             </div>
             <div class="col-4">
-                <button class="btn btn-outline-primary w-100" onclick="calculate('-')">−</button>
+                <button class="btn btn-outline-primary w-100" type="button" onclick="calculate('-')">−</button>
             </div>
             <div class="col-4">
-                <button class="btn btn-outline-primary w-100" onclick="calculate('*')">×</button>
+                <button class="btn btn-outline-primary w-100"  type="button"onclick="calculate('*')">×</button>
             </div>
-            <div class="col-6">
-                <button class="btn btn-outline-primary w-100" onclick="calculate('/')">÷</button>
+            <div class="col-4">
+                <button class="btn btn-outline-primary w-100" type="button" onclick="calculate('/')">÷</button>
             </div>
-            <div class="col-6">
-                <button class="btn btn-outline-primary w-100" onclick="calculate('%')">%</button>
+            <div class="col-4">
+                <button class="btn btn-outline-primary w-100"  type="button"onclick="calculate('%')">%</button>
             </div>
+
+            
         </div>
 
         <!-- Result -->
@@ -50,13 +53,22 @@
             <label class="form-label">Result</label>
             <input type="text" id="result" class="form-control" disabled>
         </div>
+                <button class="btn btn-secondary w-100" type="reset" onclick="resetAll()">Reset</button> 
 
         <!-- Clear Button -->
-        <button class="btn btn-secondary w-100" onclick="clearAll()">Clear</button>
+        <!-- <button class="btn btn-secondary w-100" onclick="clearAll()">Clear</button> -->
     </div>
-
+<!-- </form> -->
+<!-- <script>
+    var a,b,result;
+    function add(){
+        a=Number(document.myform.num1.value);
+        b=Number(document.myform.num2.value);
+        result=a+b;
+    }
+</script> -->
     <!-- JavaScript -->
-    <!-- <script>
+     <script>
         function calculate(operator) {
             let a = parseFloat(document.getElementById("num1").value);
             let b = parseFloat(document.getElementById("num2").value);
@@ -92,12 +104,12 @@
             document.getElementById("result").value = result;
         }
 
-        function clearAll() {
+        function resetAll() {
             document.getElementById("num1").value = "";
             document.getElementById("num2").value = "";
             document.getElementById("result").value = "";
         }
-    </script> -->
+    </script> 
 
 </body>
 </html>
