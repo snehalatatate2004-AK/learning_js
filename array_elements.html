@@ -61,5 +61,25 @@
 
 
     </script>
+
+    <script>
+        document.write("<h2> Slice Example</h2>");
+
+        var s = ["Sneha0","Payal1","Vaishu2","Arya3","Sakshi4","Sukanya5"];
+        document.write(s,"<br>");
+
+        var t = s.slice(0,4);//(start,end)
+        document.write(t,"<br>");
+    </script>
+
+    <script>
+         document.write("<h2> Splice Example</h2>");
+
+          var p = ["Red0","Green1","Yellow2","Black3","Blue4","Orange5"];
+        document.write(p,"<br>");
+
+         p.splice(2,4,"Pink","Gray");//(index,how many delete,new value)
+         document.write(p,"<br>");
+    </script>
 </body>
 </html>
