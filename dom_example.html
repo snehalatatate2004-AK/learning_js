@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <!-- example 1  -->
+    <h1>Change text using DOM</h1>
+
+    <h2 id="title">Old heading</h2>
+    <button onclick="changeText()">Click here to change text</button>
+
+    
+    <script>
+        function changeText(){
+            document.getElementById('title').innerHTML="New Heading";
+        }
+    </script>
+
+<!-- example 2  -->
+ <h1>Change style color using DOM</h1>
+ <h2 id="msg">Hello its Sneha</h2>
+ <button onclick="changeColor()">Click here to change color</button>
+
+ <script>
+
+
+    function changeColor(){
+        document.getElementById('msg').style.color='blue';
+    }
+    </script>
+
+
+ <!-- example 3  -->
+
+ <h1>Change Image using DOM</h1>
+ <img src="images/landscape.jpg" id="myImg" width="400"/>
+ <button onclick="changeImage()">Click here to change image</button>
+
+ <script> 
+function changeImage(){
+    document.getElementById('myImg').src = 'images/sun.jpg';
+}
+
+</script>
+    
+
+
+
+    <!-- example 4  -->
+     <h1>Input from User</h1>
+     <input type="text" id="nameInput"placeholder="Enter name"/>
+     <button onclick="showName()">Submit</button>
+     <h1 id="output"></h1>
+
+     <script>
+        function showName(){
+            let name = document.getElementById('nameInput').value;
+
+            document.getElementById('output').innerHTML='Hello Welcome '+ name;
+        }
+     </script>
+
+     <!-- example 5  -->
+      <h1>Delete line </h1>
+      <p id="deleteMe">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe officia nihil eligendi aperiam vitae. Voluptas eveniet, sapiente esse possimus neque officia voluptates praesentium cum fugit animi, quas accusantium, provident nostrum.</p>
+      <button onclick="removePara()">Remove</button>
+
+      <script>
+        function removePara(){
+            document.getElementById('deleteMe').remove();
+        }
+      </script>
+
+      <!-- example 6  -->
+       <p id="para1">Change my Font size</p>
+       <button onclick="increase()">+</button>
+       <button onclick="decrease()">-</button>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <h2>Welcome to my Website</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe officia nihil eligendi aperiam vitae. Voluptas eveniet, sapiente esse possimus neque officia voluptates praesentium cum fugit animi, quas accusantium, provident nostrum.</p>
+        <style>
+            body{
+                background-color: white;
+                color: black;
+            }
+
+            .dark-mode{
+                background-color: black;
+                color: white;
+            }
+        </style>
+
+        <script>
+            const toggleTheme = () =>document.body.classList.toggle("dark-mode");
+        </script>
+       <script>
+        let size = 16 ;
+           function increase(){
+            size ++;
+            document.getElementById('para1').style.fontSize= size +'px';
+
+                  }
+
+            function decrease(){
+            size --;
+            document.getElementById('para1').style.fontSize= size +'px';
+            
+                  }
+       </script>
+
+       <!-- example 7  -->
+        
+
+    </body>
+</html>
